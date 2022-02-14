@@ -4,7 +4,7 @@
  *Time: 10:34 PM
  */
 
-package com.example.demo;
+package com.example.demo.controller;
 
 import com.example.demo.model.User;
 import javafx.fxml.FXML;
