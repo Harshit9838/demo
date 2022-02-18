@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LoginController {
 
@@ -26,12 +28,19 @@ public class LoginController {
 
     public Button loginButton;
 
+    private final Logger logger;
+    public LoginController() {
+        logger = LoggerFactory.getLogger(HelloController.class);
+    }
+
     @FXML
+
 
     public  void logIn() {
         String userName = userNameTextField.getText();
         String password = passwordField.getText();
         User user = new User(userName,password);
         System.out.println(user);
+        logger.info("hello bro!!!");
     }
 }
